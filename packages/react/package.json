@@ -1,0 +1,52 @@
+{
+  "name": "@bamzzstudio/cforge-react",
+  "version": "0.1.0",
+  "description": "Small React hooks for MiniPay-aware C-forge applications.",
+  "type": "module",
+  "homepage": "https://github.com/AdekunleBamz/C-forge-sdk/tree/main/packages/react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdekunleBamz/C-forge-sdk.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/AdekunleBamz/C-forge-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cforge",
+    "react",
+    "celo",
+    "minipay"
+  ],
+  "dependencies": {
+    "@bamzzstudio/cforge-wallets": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist"
+  }
+}

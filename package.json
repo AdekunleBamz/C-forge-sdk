@@ -1,0 +1,68 @@
+{
+  "name": "@bamzzstudio/cforge-sdk",
+  "version": "0.1.0",
+  "description": "Umbrella TypeScript SDK for C-forge CFRG token minting, MiniPay stablecoin payments, Celo contract metadata, and wallet helpers.",
+  "type": "module",
+  "workspaces": [
+    "packages/addresses",
+    "packages/abi",
+    "packages/core",
+    "packages/wallets",
+    "packages/react"
+  ],
+  "homepage": "https://github.com/AdekunleBamz/C-forge-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdekunleBamz/C-forge-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdekunleBamz/C-forge-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "packages",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run build:packages && tsc -p tsconfig.json",
+    "build:packages": "npm run build --prefix packages/addresses && npm run build --prefix packages/abi && npm run build --prefix packages/core && npm run build --prefix packages/wallets && npm run build --prefix packages/react",
+    "typecheck": "npm run typecheck:packages && tsc -p tsconfig.json --noEmit",
+    "typecheck:packages": "npm run typecheck --prefix packages/addresses && npm run typecheck --prefix packages/abi && npm run typecheck --prefix packages/core && npm run typecheck --prefix packages/wallets && npm run typecheck --prefix packages/react",
+    "clean": "rm -rf dist packages/*/dist && find packages -name tsconfig.tsbuildinfo -delete",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "cforge",
+    "celo",
+    "minipay",
+    "erc-20",
+    "stablecoin",
+    "token"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@bamzzstudio/cforge-abi": "^0.1.0",
+    "@bamzzstudio/cforge-addresses": "^0.1.0",
+    "@bamzzstudio/cforge-core": "^0.1.0",
+    "@bamzzstudio/cforge-react": "^0.1.0",
+    "@bamzzstudio/cforge-wallets": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.8",
+    "react": "^18.3.1",
+    "typescript": "^5.6.2"
+  }
+}
