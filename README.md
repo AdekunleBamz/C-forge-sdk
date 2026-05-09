@@ -6,6 +6,8 @@ Repository: https://github.com/AdekunleBamz/C-forge-sdk
 
 Umbrella package: `@bamzzstudio/cforge-sdk`
 
+Deployed CFRG contract on Celo mainnet: `0x24A3b0B4A60Cf33dFb37E4725d987E6002828F04`
+
 ## Packages
 
 - `@bamzzstudio/cforge-addresses`: Celo mainnet addresses, chain IDs, token metadata.

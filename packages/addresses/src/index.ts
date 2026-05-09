@@ -46,4 +46,5 @@ export const CFRG_TOKEN = {
   name: "cforge",
   symbol: "CFRG",
   decimals: 18,
+  address: "0x24A3b0B4A60Cf33dFb37E4725d987E6002828F04" as HexAddress,
 } as const;
